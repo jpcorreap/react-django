@@ -1,4 +1,4 @@
-"""tutorial URL Configuration
+"""back URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import get_domiciliary_data, get_nearest_domicilary, get_deliveries
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('deliveries/', get_deliveries),
+    path('domiciliary/', get_domiciliary_data),
+    path('nearest_domiciliary/<int:x>/<int:y>/', get_nearest_domicilary),
 ]
