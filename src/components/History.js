@@ -14,25 +14,29 @@ function History() {
   }, []);
 
   return (
-    <div>
-      {data == null ? (
-        <p>Fetching data...</p>
-      ) : (
-        <table id="history">
-          <tr>
-            <td>Domiciliary ID</td>
-            <td>Destination Coor X</td>
-            <td>Destination Coor Y</td>
-          </tr>
-          {data.map((delivery) => (
-            <tr>
-              <td>{delivery["id"]}</td>
-              <td>{delivery["x"]}</td>
-              <td>{delivery["y"]}</td>
-            </tr>
-          ))}
-        </table>
-      )}
+    <div className="section">
+      <div className="text-center">
+        {data == null ? (
+          <p>Fetching data...</p>
+        ) : (
+          <table id="history" className="table table-striped">
+            <thead className="thead-dark">
+              <tr>
+                <th>Domiciliary ID</th>
+                <th>Destination X</th>
+                <th>Destination Y</th>
+              </tr>
+            </thead>
+            {data.map((delivery) => (
+              <tr>
+                <td>{delivery["id"]}</td>
+                <td>{delivery["x"]}</td>
+                <td>{delivery["y"]}</td>
+              </tr>
+            ))}
+          </table>
+        )}
+      </div>
     </div>
   );
 }

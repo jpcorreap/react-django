@@ -55,7 +55,7 @@ function Board() {
       );
     });
 
-    // Draws nearest domicilary info
+    // Draws nearest domiciliary info
     if (nearest != null) {
       blankBoard[nearest["x"] - 1][nearest["y"] - 1] = (
         <Square key={nearest["x"] - 1 + ":" + (nearest["y"] - 1)} type={3} />
@@ -97,14 +97,32 @@ function Board() {
   }
 
   return (
-    <div>
-      <label htmlFor="xcoor">X Coordenate: </label>
-      <input onChange={(event) => setXCoor(event.target.value)} type="number" />
-
-      <label htmlFor="ycoor">Y Coordenate: </label>
-      <input onChange={(event) => setYCoor(event.target.value)} type="number" />
-
-      <button onClick={() => draw()}>Pintar</button>
+    <div className="section" style={{ width: "1850px" }}>
+      <div className="row" style={{ height: "100px" }}>
+        <div className="col-2 text-center">
+          <p>X Coordenate: </p>
+          <input
+            onChange={(event) => setXCoor(event.target.value)}
+            type="number"
+          />
+        </div>
+        <div className="col-2 text-center">
+          <p>Y Coordenate: </p>
+          <input
+            onChange={(event) => setYCoor(event.target.value)}
+            type="number"
+          />
+        </div>
+        <div className="col">
+          <button
+            onClick={() => draw()}
+            style={{ height: "65px" }}
+            className="button btn btn-secondary"
+          >
+            Search nearest domiciliary
+          </button>
+        </div>
+      </div>
 
       {domiciliary != null ? (
         <table id="tablero">

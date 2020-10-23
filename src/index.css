@@ -1,3 +1,39 @@
+body {
+  background-color: #f5f5f5;
+  font-family: "Roboto", sans-serif;
+}
+
+.section {
+  background-color: rgb(119, 192, 241);
+  padding: 20px;
+  min-height: 500px;
+}
+
+.menu {
+  background-color: rgb(119, 192, 241);
+  width: 200px;
+  font-size: 20px;
+  margin-left: 15px;
+  align-content: center;
+  text-align: center;
+  color: black;
+}
+
+#navegationMenu {
+  margin-left: 20px;
+  margin-bottom: -8px;
+}
+
+.menu:hover {
+  background-color: blue;
+  color: white;
+}
+
+h1 {
+  margin: 25px;
+  font-weight: bolder;
+}
+
 svg {
   margin-right: 3px;
   width: 14px;
@@ -27,17 +63,11 @@ td {
   padding: 0px;
 }
 
-body {
-  margin: 20px;
-  background-color: cyan;
-  font-family: "Roboto", sans-serif;
-}
-
 table {
   table-layout: fixed;
   word-wrap: break-word;
 }
 
-#history {
-  width: 50%;
+#history tr {
+  background-color: white;
 }

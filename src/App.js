@@ -11,19 +11,18 @@ import {
 } from "react-router-dom";
 
 function App() {
-  // Header
-  // Menu
-  // Router
-  //  Busqueda
-  //  Board
   return (
     <div>
       <Header />
       <BrowserRouter>
-        <nav>
-          <Link to="/">Map </Link>
-          <Link to="/history">History</Link>
-        </nav>
+        <div className="row" id="navegationMenu">
+          <Link to="/">
+            <h2 className="menu">Map</h2>
+          </Link>
+          <Link to="/history">
+            <h2 className="menu">History</h2>
+          </Link>
+        </div>
 
         <Switch>
           <Route exact path="/">
