@@ -30,6 +30,9 @@ function Board() {
 
   function buildBlankBoard() {
     let newBoard = [];
+
+    let miFuncion = () =>{};
+
     for (let i = 0; i < 100; i++) {
       let fila = [];
       for (let j = 0; j < 100; j++)

@@ -1,7 +1,7 @@
 import React from "react";
 
 function Square(props) {
-  /*const [type, setType] = useState(0);
+  /*¿const [type, setType] = useState(0);
 
   function changeType(newState) {
     console.log("Entróó con ", newState);
